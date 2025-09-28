@@ -6,11 +6,11 @@ const html5Qrcode = new Html5Qrcode('reader', /*true*/);
 
 const qrCodeSuccessCallback = (decodedText, decodedResult) => {
     // succesfull scan handling
-    document.querySelector('#reader').style.display = 'none';
-    document.querySelector('#startScan').style.display = 'block';
-    document.querySelector('#stopScan').style.display = 'none';
     document.querySelector('#result').innerHTML= `Decoded Text = ${decodedText}`;
     console.log(`Code matched = ${decodedText}`, decodedResult);
+    /*document.querySelector('#reader').style.display = 'none';
+    document.querySelector('#startScan').style.display = 'block';
+    document.querySelector('#stopScan').style.display = 'none';*/
 };
 
 const config = {
