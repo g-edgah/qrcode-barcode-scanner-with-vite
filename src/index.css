@@ -1,3 +1,44 @@
-#stopScan{
-    display: none;
+
+body{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100vw;
+    margin: 0;
+    gap:20px;
+    position: relative;
+    bottom: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    gap: 10px; 
+}
+#pagetitle{
+    font-size: 15px;
+    font-weight: bold;
+}
+#reader{
+    width: 90%;
+    height: auto;
+    
+}
+#startScan{
+    background-color: grey;
+    border: none;
+    border-radius: 10px;
+    height: 25px;
+}
+#stopScan>button{
+    background-color: grey;
+    border: none;
+    border-radius: 10px;
+    height: 25px;
 }

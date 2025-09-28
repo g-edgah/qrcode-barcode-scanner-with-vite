@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="./src/index.css">
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 </head>
-<body>      
-    <h1>Simple Barcode/QRcode scanner</h1>
-    <div class="reader" id="reader" display='none' width='600px'></div>
-    <div id="result">result</div>
-    <button id="startScan">Scan QR Code</button>
-    <div id="stopScan" display= 'none'><button>Stop scanning</button></div>
+<body> 
+    <div id="pagetitle">Simple Barcode/QRcode scanner</div>
+    <div class="container">
+        <div class="reader" id="reader" display='none' width='600px'></div>
+        <div id="result"></div>
+        <button id="startScan">Scan QRcode/Barcode</button>
+        <div id="stopScan" style="display: none"><button>Stop scanning</button></div>
+    </div>     
+    
     <script src="./src/backCamera.js"></script>
 </body>
 </html> 
