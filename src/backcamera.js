@@ -24,6 +24,7 @@ const config = {
 
 };
 
+//html5Qrcode is passed to the function because it was declared  with const which has block scope
 const stopscan = (boom) => {
     boom.stop().then((ignore) =>{
         console.log('stopped');
