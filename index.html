@@ -9,8 +9,10 @@
 </head>
 <body>      
     <h1>Simple Barcode/QRcode scanner</h1>
-    <div class="reader" id="reader" width="600px"></div>
+    <div class="reader" id="reader" display='none' width='600px'></div>
     <div id="result">result</div>
+    <button id="startScan">Scan QR Code</button>
+    <div id="stopScan" display= 'none'><button>Stop scanning</button></div>
     <script src="./src/backCamera.js"></script>
 </body>
 </html> 
