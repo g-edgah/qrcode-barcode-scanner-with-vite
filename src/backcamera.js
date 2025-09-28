@@ -11,6 +11,8 @@ const qrCodeSuccessCallback = (decodedText, decodedResult) => {
     /*document.querySelector('#reader').style.display = 'none';
     document.querySelector('#startScan').style.display = 'block';
     document.querySelector('#stopScan').style.display = 'none';*/
+    stopscan(html5Qrcode);
+    
 };
 
 const config = {
@@ -22,6 +24,13 @@ const config = {
 
 };
 
+const stopscan = (boom) => {
+    boom.stop().then((ignore) =>{
+        console.log('stopped');
+    }).catch((err) => {
+        console.log('unable to stop', err);
+    });
+}
 
 document.querySelector('#startScan').addEventListener('click', () => {
     //prefer back camera
@@ -37,6 +46,6 @@ document.querySelector('#stopScan').addEventListener('click', () => {
     document.querySelector('#reader').style.display = 'none';
     document.querySelector('#startScan').style.display = 'block';
     document.querySelector('#stopScan').style.display = 'none';
-//prefer back camera
-html5Qrcode.stop({facingMode: 'environment'}, config, qrCodeSuccessCallback);
+
+    stopscan(html5Qrcode);
 });
